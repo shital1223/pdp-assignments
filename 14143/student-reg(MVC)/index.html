@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head><title>To do List</title></head>
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <script src="../js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="../js/lib/bootstrap.js"></script> 
+    <body>
+        <center><h1>Student Detail</h1></center>
+        <div class="container">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="row">
+                
+            <div class="form-group" id="js-container">
+                <h3><span class="label label-default">Student Name</span></h3>
+                <input type="text" id="js-Name-textbox" class="form-control"/>
+                <h3><span class="label label-default">Roll Num</span></h3>
+                <input type="text" id="js-Roll-textbox" class="form-control"/>
+                <h3><span class="label label-default">Student Course</span></h3>
+                <input type="text" id="js-Course-textbox" class="form-control"/><br>
+                <div>
+                <button type="button" class="btn btn-primary" id="js-add-task-button" style="">AddTask</button>
+                </div><br>
+                <table class="table table-bordered" id="runTimeAdd">
+                    <tr>
+                        <th >list</th>
+                        <th>Student Name</th>
+                        <th>Roll</th>
+                        <th>course</th>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="case[]"/></td>
+                        <td>Ravi</td>
+                        <td>14152</td>
+                        <td>MCA</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="case[]"/></td>
+                        <td>Shrutika</td>
+                        <td>14118</td>
+                        <td>MCA</td>
+                    </tr>
+                </table>
+               <div class="js-tasks-container">
+                <button type="button" class="btn btn-primary" id="completTask">CompleteTask</button> &nbsp;&nbsp;&nbsp;
+                <button type="button" class="btn btn-primary" id="delTsk">deleteTask</button>
+            </div>
+            </div>
+                    </div>
+            </div>
+        </div>
+        <script src="demo.js"></script>
+        <script src="view.js"></script>
+         <script src="model.js"></script>
+        <script src="controller.js"></script>
+        <script src="main.js"></script>
+<!--
+        <script src="Even.js"></script>
+        <script src="model.js"></script>
+        <script src="main.js"></script>
+-->
+
+        
+    </body>
+</html>

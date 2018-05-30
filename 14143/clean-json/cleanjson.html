@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Registration Form</title>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link href="css/bootstrap.min.css" rel="stylesheet">
+  	<link href="css/se2login.css" type="text/css" rel="stylesheet">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  	<!--script src="js/libs/bootstrap.min.js"></script-->
+   <script type="text/javascript" src="cleanjson.js"></script>
+</head>
+<body>
+<div class="container">
+   <form method="post" id="form" name="form">
+      <div class="panel panel-primary">
+         <div class="panel-heading middle"><h4>Registration Form</h4></div>
+            <div class="panel-body">
+			   <div class="row">
+			   <div class="col-lg-8 col-lg-offset-2">
+      			   <div class="form-group col-md-6 middle">
+    				  <label for="username">Username</label>
+    				  <input type="Username" name="Username" class="form-control" id="username" placeholder="Username">
+                   </div>
+    		   </div>
+    		   </div><br>
+               <div class="row">
+               <div class="col-lg-8 col-lg-offset-2">
+                   <div class="form-group col-md-6 middle">
+                      <label for="Password">Password</label>
+                      <input type="Password" name="Password" class="form-control" id="Password" placeholder="Password">
+                    </div>
+               </div>
+               </div><br>
+                <!-- This is button -->
+                <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                 <div class="form-group col-md-6 middle">
+                   <button onclick="submitValue();" type="submit" name="submit" id="submit" class="btn btn-primary">SUBMIT</button>
+                 </div>
+                </div>
+                </div>
+    	       </div>
+    	     </div>
+   	       </div>
+         </form>
+       </div>
+</body>
+</html>

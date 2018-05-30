@@ -1,0 +1,21 @@
+var Data = function(){
+    alert("call me");
+    /*$("#js-add-task-button").click(function(){
+        alert("its work");
+        call();
+    });*/
+    
+};
+
+
+function call(){
+    alert("work");
+}
+Data.prototype={
+    call:function(){
+        alert("ravi singh");
+    }
+}
+/*$(function () {
+     var model = new Data();
+ });*/

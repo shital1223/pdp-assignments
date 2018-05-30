@@ -1,0 +1,6 @@
+$(function () {
+     var view  = new ViewData(),
+     model = new Model(view),
+     container = new TaskController(model,view);
+    var data = new Data();
+ });

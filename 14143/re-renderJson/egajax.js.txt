@@ -1,0 +1,42 @@
+var PDP ={
+	callWithAjax: function(type,url,dataType,data,loadMEssage,errorMessage,contentType,callBack,object){
+		headers ={};
+		var self = this;
+		$.ajax({
+			type: type,
+			url: url,
+			datatype: dataType,
+			data:data,
+			contentType:contentType,
+			headers: headers,
+			beforeSend: function(){
+				self.functionName("beforeSend");
+
+			},
+			complete: function(xhr){
+				console.log(xhr);
+				self.functionName("complete");
+			},
+			error:function(xhr){		
+				console.log(xhr);
+				self.functionName("error");
+			},
+			success: function(response){
+			///	callBack(response, object);
+				self.functionName("success");
+				self.displayData(response, object);
+			}
+		});
+},
+functionName: function(func){
+		console.log("call:" +func);
+},
+displayData: function(response,object){
+	//var listDict= $("#form").serializeArray();
+	//console.log(object);
+	for(i in response){
+		console.log(i);
+		object[i].value = response[i];
+		}
+	}
+};

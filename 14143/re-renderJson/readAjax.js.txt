@@ -1,0 +1,25 @@
+$(document).ready(function(){
+	$("#form").on("submit",function(event){
+		event.preventDefault();
+	  listDict= $("#form").serializeArray();
+	  var data = {};
+	  for(var dict in listDict){
+		data[listDict[dict]["name"]]=listDict[dict]["value"];
+	  }
+	 // info = JSON.stringify(data);
+	  PDP.callWithAjax(
+		'POST',
+		'jsonData/input.json',
+		'json',
+		data,
+		'load message',
+		'Error message',
+		'application/json',
+		null,
+		this
+	  );
+	});
+	return false;
+  });
+
+

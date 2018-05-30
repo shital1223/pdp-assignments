@@ -1,0 +1,30 @@
+
+function submitValue()
+{
+	$(document).ready(function(){
+		var self = this;
+		$("form").on("submit",function(event){
+			event.preventDefault();
+			var listDict= $("form").serializeArray();
+			var data = {};
+			for(var dict in listDict){
+				data[listDict[dict]["name"]]=listDict[dict]["value"];
+			}
+			var requestObj = {
+				"Api": "login",
+				"Data": JSON.stringify(data).replace(/"/g, '\"')
+			}
+			console.log(requestObj);
+			requestJSON = JSON.stringify(requestObj);
+			console.log(requestJSON); 
+			var url = "http://localhost:81/apiserver?query="+requestJSON;
+			console.log(url);
+			PDP.callWithAjax("GET",url,"json",null,"Please wait...!!","Internal Error","application/json",window.renderResponse,self);
+		})
+
+		window.renderResponse = function(response, obj){
+			console.log(response);
+		};
+	});
+}	
+

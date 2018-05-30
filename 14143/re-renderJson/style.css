@@ -1,0 +1,12 @@
+body, html{
+   background-color:#34515E;
+   font-family: 'Open Sans Condensed', sans-serif;
+   font-size: 16px;
+}
+
+.middle{
+	position: relative;
+	text-align: center;
+	margin: 0 auto;
+    float: none;
+}
